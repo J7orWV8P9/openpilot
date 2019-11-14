@@ -4,16 +4,16 @@ from selfdrive.controls.lib.drive_helpers import create_event, EventTypes as ET
 from common.filter_simple import FirstOrderFilter
 from common.stat_live import RunningStatFilter
 
-_AWARENESS_TIME = 100.  # 1.6 minutes limit without user touching steering wheels make the car enter a terminal status
-_AWARENESS_PRE_TIME_TILL_TERMINAL = 25.  # a first alert is issued 25s before expiration
-_AWARENESS_PROMPT_TIME_TILL_TERMINAL = 15.  # a second alert is issued 15s before start decelerating the car
-_DISTRACTED_TIME = 11.
-_DISTRACTED_PRE_TIME_TILL_TERMINAL = 8.
-_DISTRACTED_PROMPT_TIME_TILL_TERMINAL = 6.
+_AWARENESS_TIME = 600.  # 1.6 minutes limit without user touching steering wheels make the car enter a terminal status
+_AWARENESS_PRE_TIME_TILL_TERMINAL = 20.  # a first alert is issued 25s before expiration
+_AWARENESS_PROMPT_TIME_TILL_TERMINAL = 5.  # a second alert is issued 15s before start decelerating the car
+_DISTRACTED_TIME = 300.
+_DISTRACTED_PRE_TIME_TILL_TERMINAL = 10.
+_DISTRACTED_PROMPT_TIME_TILL_TERMINAL = 5.
 
 _FACE_THRESHOLD = 0.4
 _EYE_THRESHOLD = 0.4
-_BLINK_THRESHOLD = 0.5 # 0.225
+_BLINK_THRESHOLD = 0.2 # 0.225
 _PITCH_WEIGHT = 1.35 # 1.5  # pitch matters a lot more
 _METRIC_THRESHOLD = 0.4
 _PITCH_POS_ALLOWANCE = 0.04 # 0.08  # rad, to not be too sensitive on positive pitch
